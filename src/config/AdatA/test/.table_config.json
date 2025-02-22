@@ -1,0 +1,17 @@
+{
+  "columns": [
+    {
+      "data_type": "String",
+      "name": "name",
+      "primary_key": true,
+      "size": 100
+    },
+    {
+      "data_type": "Integer",
+      "name": "age",
+      "primary_key": false,
+      "size": 8
+    }
+  ],
+  "table_name": "test"
+}
