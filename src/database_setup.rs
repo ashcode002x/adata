@@ -1,6 +1,6 @@
 use std::fs::{
     self, 
-    OpenOptions
+    // OpenOptions
     };
 // use std::io::{Read, Write, stdin};
 use std::path::Path;
@@ -10,7 +10,7 @@ use serde_json;
 
 
 pub struct Database{
-    root_path:String,
+    pub root_path:String,
 }
 
 pub struct Fields {
@@ -119,7 +119,7 @@ impl Database{
         match fs::read_dir(&dir_path){
             Ok(_) => {
                 let base_path = dir_path;
-                let file_path = format!("{}/{}.txt", base_path, table_name);
+                let file_path = format!("{}/{}.bin", base_path, table_name);
                 // ToDo check if table already exists should update table configuration or not
                 if std::path::Path::new(&file_path).exists() {
                     println!("Table already exists");
